@@ -19,4 +19,8 @@ class TestCoinChange < Minitest::Test
     assert_equal({nickel: 5}, coin_changer(5))
   end
 
+  def test_6_cents
+    assert_equal({nickel: 5, penny: 1}, coin_changer(6))
+  end
+
 end
