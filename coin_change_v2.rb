@@ -6,7 +6,7 @@ def coin_changer(cents_given_to_me)
     while cents_given_to_me >= worth_of_coins
       cents_given_to_me = cents_given_to_me - worth_of_coins
       coins_given_to_customer[individual_coins] += 1
-      end
     end
+  end
   coins_given_to_customer
 end

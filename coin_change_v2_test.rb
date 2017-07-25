@@ -39,7 +39,15 @@ class TestCoinChangeV2 < Minitest::Test
     assert_equal({quarter: 0, dime: 1, nickel: 1, penny: 4}, coin_changer(19))
   end
 
-  def test_fail_purpose
-  assert_equal({quarter: 0, dime: 0, nickel: 1, penny: 0}, coin_changer(43))
+  def test_43_cents
+    assert_equal({quarter: 1, dime: 1, nickel: 1, penny: 3}, coin_changer(43))
   end
+
+  def test_78_cents
+    assert_equal({quarter: 3, dime: 0, nickel: 0, penny: 3}, coin_changer(78))
+  end
+
+  # def test_fail_purpose
+  # assert_equal({quarter: 0, dime: 0, nickel: 1, penny: 0}, coin_changer(43))
+  # end
 end
